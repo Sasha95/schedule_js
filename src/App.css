@@ -1,4 +1,4 @@
-/* #navbar {
+#navbar {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -11,8 +11,8 @@
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
   font-weight: 300;
-} */
-/* 
+}
+
 #navbar li {
   position: relative;
   float: left;
@@ -57,4 +57,4 @@
 #navbar li.active,
 #navbar li.active:before {
   background: steelblue;
-} */
+}
