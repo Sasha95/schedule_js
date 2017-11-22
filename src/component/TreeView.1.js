@@ -11,10 +11,9 @@ class Treeview extends Component {
     return (
       <div className="container">
         <div className="panel panel-default">
-          <div className="panel-heading">Treeview List</div>
+          {/* <div className="panel-heading">Treeview List</div> */}
           <div className="panel-body">
             <ul className="treeview">
-              {' '}
               <li>
                 <a href="#">Tree</a>
                 <ul>
