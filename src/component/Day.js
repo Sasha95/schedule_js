@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Lesson = ({ time, discipline, classroom, teacher }) => (
   <tr>
@@ -7,26 +7,26 @@ const Lesson = ({ time, discipline, classroom, teacher }) => (
     <td>{classroom}</td>
     <td>{teacher}</td>
   </tr>
-)
+);
 
-const itemToLesson = ({ id, ...rest }) => <Lesson key={id} {...rest} />
+const itemToLesson = ({ id, ...rest }) => <Lesson key={id} {...rest} />;
 
 export default ({ id, day, lessons }) => (
-    <main className="col-sm-5 offset-sm-3 col-md-12 offset-md-0 pt-3">
+    <div>
+        <p />
     <h3>{day}</h3>
     <table className="table table-bordered">
-      <tr >
+      <tr className="table-success">
         <th>Время</th>
         <th>
-          Название <br /> пары
+          Название пары
         </th>
         <th>
-          № <br />кабинета
+          № кабинета
         </th>
         <th>Преподаватель</th>
       </tr>
       {lessons.map(itemToLesson)}
-
-  </table>
-  </main>
-)
+    </table>
+  </div>
+);

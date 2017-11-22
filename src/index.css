@@ -49,8 +49,8 @@ div.treeview ul:first-child:before {
   bottom: 15px;
 }
 .treeview li {
-  margin: 0;
-  padding: 0 1em;
+  margin: 0 ;
+  padding: 0 0.7em;
   line-height: 2em;
   font-weight: 700;
   position: relative;
@@ -68,7 +68,6 @@ div.treeview ul:first-child:before {
 }
 .tree-indicator {
   margin-right: 5px;
-
   cursor: pointer;
 }
 .treeview li a {
