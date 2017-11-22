@@ -13,135 +13,55 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div>
-        <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <div className="navbar-header">
-              <button
-                type="button"
-                className="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#navbar-main"
-              >
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-                <span className="icon-bar" />
-              </button>
+      <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button
+          className="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon" />
+        </button>
+        <a className="navbar-brand" href="#">
+          Navbar
+        </a>
 
-              <a className="navbar-brand" href="#">
-                Brand
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#">
+                Home <span className="sr-only">(current)</span>
               </a>
-            </div>
-
-            <div className="collapse navbar-collapse" id="navbar-main" />
-          </div>
-        </nav>
-
-        <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <div className="navbar-header">...</div>
-            <div className="collapse navbar-collapse" id="navbar-main">
-              <ul className="nav navbar-nav">
-                <li className="active">
-                  <a href="#">Ссылка 1</a>
-                </li>
-                <li>
-                  <a href="#">Ссылка 2</a>
-                </li>
-                <li>
-                  <a href="#">Ссылка 3</a>
-                </li>
-                <li>
-                  <a href="#">Ссылка 4</a>
-                </li>
-                <li>
-                  <a href="#">Ссылка 5</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <div className="navbar-header">...</div>
-            <div className="collapse navbar-collapse" id="navbar-main">
-              <ul className="nav navbar-nav">
-                <li className="active">
-                  <a href="#">Ссылка 1</a>
-                </li>
-                <li>
-                  <a href="#">Ссылка 2</a>
-                </li>
-                <li>
-                  <a href="#">Ссылка 3</a>
-                </li>
-                <li>
-                  <a href="#">Ссылка 4</a>
-                </li>
-                <li>
-                  <a href="#">Ссылка 5</a>
-                </li>
-                <li className="dropdown">
-                  <a
-                    href="#"
-                    className="dropdown-toggle"
-                    data-toggle="dropdown"
-                  >
-                    Раздел <span className="caret" />
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a href="#">Ссылка</a>
-                    </li>
-                    <li>
-                      <a href="#">Ссылка</a>
-                    </li>
-                    <li role="separator" className="divider" />
-                    <li>
-                      <a href="#">Ссылка</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <div className="navbar-header">...</div>
-
-            <div className="collapse navbar-collapse" id="navbar-main">
-              <ul className="nav navbar-nav">...</ul>
-
-              <ul className="nav navbar-nav navbar-right">
-                <li>
-                  <a href="#">Ссылка</a>
-                </li>
-
-                <li className="dropdown">
-                  <a
-                    href="#"
-                    className="dropdown-toggle"
-                    data-toggle="dropdown"
-                  >
-                    Раздел <span className="caret" />
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a href="#">Ссылка</a>
-                    </li>
-                    <li>
-                      <a href="#">Ссылка</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Link
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link disabled" href="#">
+                Disabled
+              </a>
+            </li>
+          </ul>
+          <form className="form-inline my-2 my-lg-0">
+            <input
+              className="form-control mr-sm-2"
+              type="text"
+              placeholder="Search"
+            />
+            <button
+              className="btn btn-outline-success my-2 my-sm-0"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
     )
   }
 }

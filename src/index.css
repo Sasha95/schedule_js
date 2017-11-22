@@ -1,80 +1,90 @@
-html,
-body {
-  height: 100%;
-  min-height: 75rem;
-  padding-top: 2.5rem;
-}
-body {
-  margin: 0;
-  background-color: lightsteelblue;
-  background-image: url('http://hdw.datawallpaper.com/architecture/vintage-new-york-city-299988.jpg');
-  background-position: center;
-  background-size: cover;
-  -webkit-background-blend-mode: overlay;
-  -moz-background-blend-mode: overlay;
-  background-blend-mode: overlay;
+div.panel:first-child {
+  margin-top: 20px;
 }
 
-.tree {
-  min-height: 20px;
-  padding: 19px;
+div.treeview {
+  min-width: 100px;
+  min-height: 100px;
+
+  max-height: 256px;
+  overflow: auto;
+
+  padding: 4px;
+
   margin-bottom: 20px;
-  background-color: #fbfbfb;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
+
+  color: #369;
+
+  border: solid 1px;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-.tree li {
-  list-style-type: none;
+div.treeview ul:first-child:before {
+  display: none;
+}
+.treeview,
+.treeview ul {
   margin: 0;
-  padding: 10px 5px 0 5px;
+  padding: 0;
+  list-style: none;
+
+  color: #369;
+}
+.treeview ul {
+  margin-left: 1em;
   position: relative;
 }
-.tree li::before,
-.tree li::after {
+.treeview ul ul {
+  margin-left: 0.5em;
+}
+.treeview ul:before {
   content: '';
-  left: -20px;
+  display: block;
+  width: 0;
   position: absolute;
-  right: auto;
-}
-.tree li::before {
-  border-left: 1px solid #999;
-  bottom: 50px;
-  height: 100%;
   top: 0;
-  width: 1px;
+  left: 0;
+  border-left: 1px solid;
+
+  /* creates a more theme-ready standard for the bootstrap themes */
+  bottom: 15px;
 }
-.tree li::after {
-  border-top: 1px solid #999;
-  height: 20px;
-  top: 30px;
-  width: 25px;
+.treeview li {
+  margin: 0;
+  padding: 0 1em;
+  line-height: 2em;
+  font-weight: 700;
+  position: relative;
 }
-.tree li span {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border: 1px solid #999;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 3px 8px;
-  text-decoration: none;
+.treeview ul li:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 0;
+  border-top: 1px solid;
+  margin-top: -1px;
+  position: absolute;
+  top: 1em;
+  left: 0;
 }
-.tree li.parent_li > span {
+.tree-indicator {
+  margin-right: 5px;
+
   cursor: pointer;
 }
-.tree > ul > li::before,
-.tree > ul > li::after {
-  border: 0;
+.treeview li a {
+  text-decoration: none;
+  color: inherit;
+
+  cursor: pointer;
 }
-.tree li:last-child::before {
-  height: 30px;
-}
-.tree li.parent_li > span:hover,
-.tree li.parent_li > span:hover + ul li span {
-  background: #eee;
-  border: 1px solid #94a0b4;
-  color: #000;
+.treeview li button,
+.treeview li button:active,
+.treeview li button:focus {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  background: transparent;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  outline: 0;
 }

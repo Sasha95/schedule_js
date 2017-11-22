@@ -7,87 +7,61 @@ class Treeview extends Component {
 
   render() {
     return (
-      <div>
-        <div id="collapseDVR3" className="panel-collapse">
-          <div className="tree ">
-            <ul>
+      <div className="container">
+        <div className="panel panel-default">
+          <div className="panel-heading">Treeview List</div>
+          <div className="panel-body">
+            <ul className="treeview">
               <li>
-                {' '}
-                <span>
-                  <i className="fa fa-folder-open" /> Менюшка
-                </span>
+                <a href="#">Tree</a>
                 <ul>
                   <li>
-                    {' '}
-                    <span>
-                      <i className="fa fa-minus-square" /> другая Менюшка
-                    </span>
-                    <ul>
-                      <li>
-                        {' '}
-                        <span> ещё одна Менюшка </span>{' '}
-                      </li>
-                    </ul>
+                    <a href="#">Branch</a>
                   </li>
                   <li>
-                    {' '}
-                    <span>
-                      <i className="fa fa-minus-square" /> другая{' '}
-                    </span>
+                    <a href="#">Branch</a>
                     <ul>
                       <li>
-                        {' '}
-                        <span> Менюшка </span>
+                        <a href="#">Stick</a>
                       </li>
                       <li>
-                        {' '}
-                        <span>
-                          <i className="fa fa-minus-square" /> Менюшка
-                        </span>
+                        <a href="#">Stick</a>
                         <ul>
                           <li>
-                            {' '}
-                            <span>
-                              <i className="fa fa-minus-square" /> Менюшка
-                            </span>
+                            <a href="#">Twig</a>
+                          </li>
+                          <li>
+                            <a href="#">Twig</a>
                             <ul>
                               <li>
-                                {' '}
-                                <span> Менюшка</span>
+                                <a href="#">Leaf</a>
                               </li>
                               <li>
-                                {' '}
-                                <span> Менюшка</span>
+                                <a href="#">Leaf</a>
+                              </li>
+                              <li>
+                                <a href="#">Leaf</a>
                               </li>
                             </ul>
                           </li>
                           <li>
-                            {' '}
-                            <span> Менюшка</span>{' '}
+                            <a href="#">Twig</a>
                           </li>
                           <li>
-                            {' '}
-                            <span> Менюшка</span>{' '}
+                            <a href="#">Twig</a>
                           </li>
                         </ul>
                       </li>
                       <li>
-                        {' '}
-                        <span> Менюшка</span>
+                        <a href="#">Stick</a>
                       </li>
                     </ul>
                   </li>
-                </ul>
-              </li>
-              <li>
-                {' '}
-                <span>
-                  <i className="fa fa-folder-open" /> Менюшка2
-                </span>
-                <ul>
                   <li>
-                    {' '}
-                    <span> Менюшка</span>{' '}
+                    <a href="#">Branch</a>
+                  </li>
+                  <li>
+                    <a href="#">Branch</a>
                   </li>
                 </ul>
               </li>
