@@ -2,13 +2,7 @@ import React, { Component } from 'react'
 import Branch from './Branch'
 import hierarchy from '../data/hierarchy'
 
-class Treeview extends Component {
-  showSettings(event) {
-    event.preventDefault()
-  }
-
-  render() {
-    return (
+export default ({ getTimeTable }) => (
       <div className="container">
         <div className="panel panel-default">
           {/* <div className="panel-heading">Treeview List</div> */}
@@ -20,7 +14,7 @@ class Treeview extends Component {
                   {hierarchy
                     .filter(el => el.type === 'faculty')
                     .map(el => (
-                      <Branch key={el.id} id={el.id} name={el.name} />
+                      <Branch key={el.id} id={el.id} name={el.name} getTimeTable={getTimeTable}/>
                     ))}
                 </ul>
               </li>
@@ -29,6 +23,5 @@ class Treeview extends Component {
         </div>
       </div>
     )
-  }
-}
-export default Treeview
+
+
