@@ -1,27 +1,46 @@
 import React, { Component } from 'react'
 import hierarchy from '../data/hierarchy'
 
-class Branch extends Component {
+export default  class Branch extends Component {
   state = {
-    isOpen: false
+    current: undefined
   }
 
-  handleClick = event => { this.setState({isOpen: !this.state.isOpen})}
+  handleClick = ({ target }) => {
+    const current =
+      this.state.current === Number(target.id) ? undefined : Number(target.id)
+    this.setState({ current })
+    if (target.type === 'group') {
+      this.props.getTimeTable(Number(target.id))
+    }
+  }
+
+  elToLink = ({ ...props }) => (
+    <Branch
+      key={props.id}
+      isOpen={props.id === this.state.current}
+      onClick={this.handleClick}
+      getTimeTable={this.props.getTimeTable}
+      {...props}
+    />
+  )
 
   render() {
+    const { id, name, onClick, isOpen, type } = this.props
     return (
       <li>
-        <a role='button' onClick={this.handleClick}>{this.props.name}</a>
-        <ul>
-        {this.state.isOpen &&
-            hierarchy
-            .filter(el => this.props.id === el.parent)
-            .map(el => <Branch key={el.id} id={el.id} name={el.name} />)}
-        </ul>
+        <a id={id} type={type} role="button" onClick={onClick}>
+          {name}
+        </a>
+        {isOpen && type !== 'group' ? (
+          <ul id={id}>
+            {hierarchy.filter(el => el.parent === id).map(this.elToLink)}
+          </ul>
+        ) : null}
       </li>
     )
   }
 }
-export default Branch
+
 
 // https://bootsnipp.com/snippets/10pnN

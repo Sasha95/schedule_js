@@ -12,10 +12,10 @@ const Lesson = ({ time, discipline, classroom, teacher }) => (
 const itemToLesson = ({ id, ...rest }) => <Lesson key={id} {...rest} />
 
 export default ({ id, day, lessons }) => (
-  <table border="1" className={id}>
-    <caption>{day}</caption>
-    <tbody>
-      <tr>
+    <main className="col-sm-5 offset-sm-3 col-md-12 offset-md-0 pt-3">
+    <h3>{day}</h3>
+    <table className="table table-bordered">
+      <tr >
         <th>Время</th>
         <th>
           Название <br /> пары
@@ -26,6 +26,7 @@ export default ({ id, day, lessons }) => (
         <th>Преподаватель</th>
       </tr>
       {lessons.map(itemToLesson)}
-    </tbody>
+
   </table>
+  </main>
 )
