@@ -11,6 +11,6 @@ const itemToDay = ({ id, day, lessons }) => (
 export default class Week extends Component {
   render() {
     const groupTimeTable = week.find(el => el.groupId === this.props.groupId)
-    return groupTimeTable ? groupTimeTable.days.map(itemToDay) : null
+    return groupTimeTable ? <div className="row">{groupTimeTable.days.map(itemToDay)}</div> : null
   }
 }
