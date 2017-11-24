@@ -17,9 +17,9 @@ export default class App extends Component {
     return (
       <div>
         <Navbar />
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
-            <div className="col-xs-12 col-md-2  ">
+            <div className="col-xs-12 col-md-2 right">
               <Treeview getTimeTable={this.getTimeTable} />
             </div>
             <div className="col">

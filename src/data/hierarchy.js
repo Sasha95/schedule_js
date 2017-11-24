@@ -45,5 +45,9 @@ export default [
   { id: 42, parent: 40, name: '2 курс', type: 'course' },
   { id: 43, parent: 40, name: '3 курс', type: 'course' },
   { id: 44, parent: 40, name: '4 курс', type: 'course' },
-  { id: 45, parent: 40, name: '5 курс', type: 'course' }
+  { id: 45, parent: 40, name: '5 курс', type: 'course' },
+
+  { id: 48, parent: 1, name: 'Препод', type: 'level' },
+  { id: 49, parent: 48, name: 'ПМиИ', type: 'kaf' },
+  { id: 50, parent: 49, name: 'Коровай', type: 'teach' }
 ]
