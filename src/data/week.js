@@ -165,6 +165,88 @@ const week = [
             teacher: ''
           }
         ]
+      },
+      {
+        id: 5,
+        day: 'Пятница',
+        lessons: [
+          {
+            id: 1,
+            time: '8.00-9.30',
+            discipline: 'Алгебра',
+            classroom: '325',
+            teacher: 'Ермакова Г.Н.'
+          },
+          {
+            id: 2,
+            time: '9.40-11.10',
+            discipline: 'Геометрия',
+            classroom: '323',
+            teacher: ''
+          },
+          {
+            id: 3,
+            time: '11.30-13.00',
+            discipline: 'Физкультура',
+            classroom: '---',
+            teacher: ''
+          },
+          {
+            id: 4,
+            time: '13.10-14.40',
+            discipline: '5',
+            classroom: '38',
+            teacher: '24'
+          },
+          {
+            id: 5,
+            time: '14.50-16.20',
+            discipline: '5,5',
+            classroom: '38',
+            teacher: ''
+          }
+        ]
+      },
+      {
+        id: 6,
+        day: 'Суббота',
+        lessons: [
+          {
+            id: 1,
+            time: '8.00-9.30',
+            discipline: 'Алгебра',
+            classroom: '325',
+            teacher: 'Ермакова Г.Н.'
+          },
+          {
+            id: 2,
+            time: '9.40-11.10',
+            discipline: 'Геометрия',
+            classroom: '323',
+            teacher: ''
+          },
+          {
+            id: 3,
+            time: '11.30-13.00',
+            discipline: 'Физкультура',
+            classroom: '---',
+            teacher: ''
+          },
+          {
+            id: 4,
+            time: '13.10-14.40',
+            discipline: '5',
+            classroom: '38',
+            teacher: '24'
+          },
+          {
+            id: 5,
+            time: '14.50-16.20',
+            discipline: '5,5',
+            classroom: '38',
+            teacher: ''
+          }
+        ]
       }
     ]
   },
@@ -261,8 +343,8 @@ const week = [
             id: 3,
             time: '11.30-13.00',
             discipline: 'Языки программирования',
-            classroom: 'Марков Д.А.',
-            teacher: 'ВЦ'
+            classroom: 'ВЦ',
+            teacher: 'Марков Д.А.'
           }
         ]
       },
@@ -295,8 +377,76 @@ const week = [
             id: 4,
             time: '13.10-14.40',
             discipline: 'Языки программирования',
-            classroom: 'Марков Д.А.',
-            teacher: 'ВЦ'
+            classroom: 'ВЦ',
+            teacher: 'Марков Д.А.'
+          }
+        ]
+      },
+      {
+        id: 5,
+        day: 'Пятница',
+        lessons: [
+          {
+            id: 1,
+            time: '8.00-9.30',
+            discipline: 'Физическая культура',
+            classroom: 'стадион',
+            teacher: ''
+          },
+          {
+            id: 2,
+            time: '9.40-11.10',
+            discipline: 'Основы ЭВМ',
+            classroom: 'ВЦ',
+            teacher: 'Бугаенко А.В.'
+          },
+          {
+            id: 3,
+            time: '11.30-13.00',
+            discipline: 'Основы ЭВМ',
+            classroom: 'ВЦ',
+            teacher: 'Бугаенко А.В.'
+          },
+          {
+            id: 4,
+            time: '13.10-14.40',
+            discipline: 'Языки программирования',
+            classroom: 'ВЦ',
+            teacher: 'Марков Д.А.'
+          }
+        ]
+      },
+      {
+        id: 6,
+        day: 'Суббота',
+        lessons: [
+          {
+            id: 1,
+            time: '8.00-9.30',
+            discipline: 'Физическая культура',
+            classroom: 'стадион',
+            teacher: ''
+          },
+          {
+            id: 2,
+            time: '9.40-11.10',
+            discipline: 'Основы ЭВМ',
+            classroom: 'ВЦ',
+            teacher: 'Бугаенко А.В.'
+          },
+          {
+            id: 3,
+            time: '11.30-13.00',
+            discipline: 'Основы ЭВМ',
+            classroom: 'ВЦ',
+            teacher: 'Бугаенко А.В.'
+          },
+          {
+            id: 4,
+            time: '13.10-14.40',
+            discipline: 'Языки программирования',
+            classroom: 'ВЦ',
+            teacher: 'Марков Д.А.'
           }
         ]
       }
