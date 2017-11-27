@@ -1,69 +1,68 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import DropDown from "./DropDown";
 
 class Navbar extends Component {
   state = {
-    isCollapsed: true
-  }
+    isOpen: false
+  };
 
-  toggleExpand = () => {
+  toggleDrop = () => {
     this.setState({
-      isCollapsed: !this.state.isCollapsed
-    })
-  }
+      isOpen: !this.state.isOpen
+    });
+  };
 
   render() {
     return (
-      <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button
-          className="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-        <a className="navbar-brand" role="button">
-          Navbar
-        </a>
+      <div className="container">
+        <nav className="navbar navbar-toggleable-md navbar-light bg-faded ">
+          <button
+            className="navbar-toggler navbar-toggler-right"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <a className="navbar-brand" role="button">
+            Расписание
+          </a>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" role="button">
-                Home <span className="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" role="button">
-                Link
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" role="button">
-                Disabled
-              </a>
-            </li>
-          </ul>
-          <form className="form-inline my-2 my-lg-0">
-            <input
-              className="form-control mr-sm-2"
-              type="text"
-              placeholder="Search"
-            />
-            <button
-              className="btn btn-outline-success my-2 my-sm-0"
-              type="submit"
-            >
-              Search
-            </button>
-          </form>
-        </div>
-      </nav>
-    )
+          <div>
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <a className="nav-link" role="button">
+                  <DropDown name="Факультет" />
+                  <span className="sr-only">(current)</span>
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link disabled" role="button">
+                  <DropDown name="Форма обучения" />
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link disabled" role="button">
+                  <DropDown name="Курс" />
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link disabled" role="button">
+                  <DropDown name="Группа" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    );
   }
 }
 
-export default Navbar
+export default Navbar;

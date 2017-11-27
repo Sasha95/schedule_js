@@ -8,7 +8,7 @@
   padding: 0;
   list-style: none;
   background: #222;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 18px;
   font-weight: 300;
 }
@@ -31,7 +31,7 @@ class #navbar li {
 }
 
 #navbar li:before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 50%;
@@ -56,4 +56,13 @@ class #navbar li {
 #navbar li.active,
 #navbar li.active:before {
   background: steelblue;
+}
+
+.NavToolbar {
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background: white;
+  z-index: 100;
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import Branch from './Branch'
+import React from "react";
+import Branch from "./Branch";
 
 export default ({ getTimeTable }) => (
   <div className="panel">
@@ -8,4 +8,4 @@ export default ({ getTimeTable }) => (
       <Branch key={0} id={0} isOpen={true} getTimeTable={getTimeTable} />
     </ul>
   </div>
-)
+);

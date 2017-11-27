@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-import './App.css'
-import Navbar from './component/Navbar'
-import Treeview from './component/TreeView'
-import Week from './component/Week'
+import React, { Component } from "react";
+import "./App.css";
+import Navbar from "./component/Navbar";
+import Treeview from "./component/TreeView";
+import Week from "./component/Week";
 
 export default class App extends Component {
   state = {
     groupId: undefined
-  }
+  };
 
   getTimeTable = groupId => {
-    this.setState({ groupId })
-  }
+    this.setState({ groupId });
+  };
 
   render() {
     return (
@@ -28,6 +28,6 @@ export default class App extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
