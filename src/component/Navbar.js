@@ -1,21 +1,11 @@
 import React, { Component } from "react";
 import DropDown from "./DropDown";
 
-class Navbar extends Component {
-  state = {
-    isOpen: false
-  };
-
-  toggleDrop = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  };
-
+export default class Navbar extends Component {
   render() {
     return (
-      <div className="container">
-        <nav className="navbar navbar-toggleable-md navbar-light bg-faded ">
+      <div className="container sticky-top">
+        <nav className="navbar navbar-toggleable-sm navbar-light bg-faded ">
           <button
             className="navbar-toggler navbar-toggler-right"
             type="button"
@@ -30,39 +20,18 @@ class Navbar extends Component {
           <a className="navbar-brand" role="button">
             Расписание
           </a>
-
-          <div>
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" role="button">
-                  <DropDown name="Факультет" />
-                  <span className="sr-only">(current)</span>
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a className="nav-link disabled" role="button">
-                  <DropDown name="Форма обучения" />
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a className="nav-link disabled" role="button">
-                  <DropDown name="Курс" />
-                </a>
-              </li>
-
-              <li className="nav-item">
-                <a className="nav-link disabled" role="button">
-                  <DropDown name="Группа" />
-                </a>
-              </li>
-            </ul>
+          <div className="collapse navbar-collapse">
+            <div>
+              <ul className="navbar-nav mr-auto">
+                <DropDown name="Факультет" />
+                <DropDown name="Форма обучения" />
+                <DropDown name="Курс" />
+                <DropDown name="Группа" />
+              </ul>
+            </div>
           </div>
         </nav>
       </div>
     );
   }
 }
-
-export default Navbar;
