@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DropDown from "./DropDown";
+import View from "./View";
 
 export default class Navbar extends Component {
   render() {
@@ -27,6 +28,8 @@ export default class Navbar extends Component {
                 <DropDown name="Форма обучения" />
                 <DropDown name="Курс" />
                 <DropDown name="Группа" />
+
+                <View buttonLabel="Редактировать" />
               </ul>
             </div>
           </div>

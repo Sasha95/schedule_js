@@ -5,13 +5,13 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
     "graphql-tag": "^2.5.0",
-    "react": "^16.1.0",
+    "react": "^16.2.0",
     "react-burger-menu": "^2.1.11",
-    "react-dom": "^16.1.0",
+    "react-dom": "^16.2.0",
     "react-scripts": "1.0.17",
     "react-select": "^1.1.0",
     "react-treeview": "^0.4.7",
-    "reactstrap": "^5.0.0-alpha.3"
+    "reactstrap": "^5.0.0-alpha.4"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./component/Navbar";
-import Treeview from "./component/TreeView";
-import Week from "./component/Week";
+// import Treeview from "./component/TreeView";
+// import Week from "./component/Week";
+import Sign from "./component/Sign";
 
 export default class App extends Component {
   state = {
@@ -17,16 +18,6 @@ export default class App extends Component {
     return (
       <div>
         <Navbar />
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12 col-md-2 right">
-              <Treeview getTimeTable={this.getTimeTable} />
-            </div>
-            <div className="col">
-              <Week groupId={this.state.groupId} />
-            </div>
-          </div>
-        </div>
       </div>
     );
   }
