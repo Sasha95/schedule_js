@@ -10,16 +10,29 @@ const parameters = {
 };
 
 const FACULTY_QUERY = gql`
-  query($offset: Int, $first: Int) {
-    allPosts(offset: $offset, first: $first) {
+  query {
+    allDivisions {
+      totalCount
       nodes {
-        id
-        personId
-        person: personByPersonId {
-          name
-        }
-        title
-        body: preview
+        key: id
+        name
+        shortName
+      }
+    }
+    allEducationForms {
+      totalCount
+      nodes {
+        key: id
+        name
+        shortName
+      }
+    }
+    allEducationLevels(condition: { active: true }) {
+      totalCount
+      nodes {
+        key: id
+        name
+        shortName: pressmark
       }
     }
   }
@@ -30,4 +43,4 @@ const b = graphql(FACULTY_QUERY, parameters);
 // сделать, что b был как       options={[{ value: "one", label: "One" },{ value: "two", label: "Two" }]}
 //и такую ерунду сделать для факультета, формы обучения, курса и группы
 
-export default b(PostsList);
+export default "fff";

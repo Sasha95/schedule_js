@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DropDown from "./DropDown";
-import View from "./View";
+import ModalWindow from "./ModalWindow";
 
 export default class Navbar extends Component {
   render() {
@@ -29,7 +29,7 @@ export default class Navbar extends Component {
                 <DropDown name="Курс" />
                 <DropDown name="Группа" />
 
-                <View buttonLabel="Редактировать" />
+                <ModalWindow buttonLabel="Войти" />
               </ul>
             </div>
           </div>

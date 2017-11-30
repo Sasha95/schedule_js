@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./component/Navbar";
-// import Treeview from "./component/TreeView";
-// import Week from "./component/Week";
-import Sign from "./component/Sign";
+import Faculty from "../src/component/select/Faculty";
 
 export default class App extends Component {
   state = {
@@ -18,6 +16,7 @@ export default class App extends Component {
     return (
       <div>
         <Navbar />
+        <Faculty />
       </div>
     );
   }
