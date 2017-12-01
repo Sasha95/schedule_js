@@ -1,18 +1,16 @@
-import React, { Component } from "react";
+import React from 'react'
 
-import Day from "./Day";
+import { Row } from 'reactstrap'
 
-import week from "../data/week";
+import { timetable } from '../data/index'
 
-const itemToDay = ({ id, day, lessons }) => (
-  <Day key={id} id={id} day={day} lessons={lessons} />
-);
+import Day from './Day'
 
-export default class Week extends Component {
-  render() {
-    const groupTimeTable = week.find(el => el.groupId === this.props.groupId);
-    return groupTimeTable ? (
-      <div className="row">{groupTimeTable.days.map(itemToDay)}</div>
-    ) : null;
-  }
-}
+// const Week = () => console.log(timetable.groups.days) || <div>sadfasf</div> //<Row>{timetable.groups.days.map(Day)}</Row>
+// const Week = () => <Row>{timetable.groups.days.map(Day)}</Row>
+const Week = () => <Row>Ghhhh</Row>
+
+export default Week
+
+// WEBPACK FOOTER //
+// ./src/components/Week.js

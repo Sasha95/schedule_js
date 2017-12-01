@@ -1,23 +1,20 @@
-import React, { Component } from "react";
-import "./App.css";
-import Navbar from "./component/Navbar";
-import Faculty from "../src/component/select/Faculty";
+import React from 'react'
+import { Route } from 'react-router-dom'
+import { Container } from 'reactstrap'
+import 'react-select/dist/react-select.css'
+import './App.css'
 
-export default class App extends Component {
-  state = {
-    groupId: undefined
-  };
+import Home from './component/pages/HomePage'
+import AppNavbar from './component/AppNavbar'
 
-  getTimeTable = groupId => {
-    this.setState({ groupId });
-  };
+const App = () => (
+  <Container>
+    <AppNavbar />
+    <Route path="/" component={Home} />
+  </Container>
+)
 
-  render() {
-    return (
-      <div>
-        <Navbar />
-        <Faculty />
-      </div>
-    );
-  }
-}
+export default App
+
+// WEBPACK FOOTER //
+// ./src/App.js

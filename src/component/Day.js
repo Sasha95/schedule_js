@@ -1,29 +1,34 @@
-import React from "react";
+import React from 'react'
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  Col,
+  ListGroup,
+  ListGroupItem
+} from 'reactstrap'
 
-const Lesson = ({ time, discipline, classroom, teacher }) => (
-  <tr>
-    <td>{time}</td>
-    <td>{discipline}</td>
-    <td>{classroom}</td>
-    <td>{teacher}</td>
-  </tr>
-);
+const Class = props => (
+  <ListGroupItem key={props.number}>
+    <span>{`${props.number}. `}</span>
+    {props.subject}
+    <span>{` / ${props.classroom}`}</span>
+    <span className="text-muted">{` / ${props.teacher}`}</span>
+  </ListGroupItem>
+)
 
-const itemToLesson = ({ id, ...rest }) => <Lesson key={id} {...rest} />;
-export default ({ id, day, lessons }) => (
-  <div className="col-xs-12 col-xl-6">
-    <p />
-    <h3>{day}</h3>
-    <table className="table table-sm table-bordered">
-      <thead>
-        <tr className="table-success">
-          <th>Время</th>
-          <th>Название пары</th>
-          <th>№ кабинета</th>
-          <th>Преподаватель</th>
-        </tr>
-      </thead>
-      <tbody>{lessons.map(itemToLesson)}</tbody>
-    </table>
-  </div>
-);
+const Day = props => (
+  <Col key={props.name} xs="12" lg="6" xl="4">
+    <Card>
+      <CardBody>
+        <CardTitle>{props.name}</CardTitle>
+      </CardBody>
+      <ListGroup>{props.classes.map(Class)}</ListGroup>
+    </Card>
+  </Col>
+)
+
+export default Day
+
+// WEBPACK FOOTER //
+// ./src/components/Day.js
