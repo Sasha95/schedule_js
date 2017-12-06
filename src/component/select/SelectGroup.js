@@ -12,7 +12,7 @@ import gql from 'graphql-tag'
 
 const ALL_SELECTIONS = gql`
   query {
-    allDivisions {
+    allDivisions: allFaculties {
       totalCount
       nodes {
         key: id
@@ -20,20 +20,11 @@ const ALL_SELECTIONS = gql`
         shortName
       }
     }
-    allEducationForms {
-      totalCount
+    allEducationLevels {
       nodes {
-        key: id
+        id
         name
-        shortName
-      }
-    }
-    allEducationLevels(condition: { active: true }) {
-      totalCount
-      nodes {
-        key: id
-        name
-        shortName: pressmark
+        shortName: name
       }
     }
   }
@@ -55,6 +46,7 @@ const SELECT_GROUPS = gql`
     $educationLevel: Int
     $recruitmentYear: Int
   ) {
+    EDUCATION_FORM
     allNodes: searchAcademicGroup(
       search: $search
       first: $first
@@ -118,12 +110,7 @@ class SelectGroup extends Component {
   })
 
   render() {
-    const {
-      loading,
-      allDivisions,
-      allEducationForms,
-      allEducationLevels
-    } = this.props
+    const { loading, allDivisions, allEducationLevels } = this.props
     return (
       <Form>
         <FormGroup>
@@ -137,21 +124,6 @@ class SelectGroup extends Component {
                 [GROUP]: undefined
               })}
             options={loading ? [] : allDivisions.nodes}
-            valueKey="key"
-            labelKey="name"
-          />
-        </FormGroup>
-        <FormGroup>
-          <Select
-            name="form-field-name"
-            placeholder={'Выбор формы'}
-            value={this.state[EDUCATION_FORM]}
-            onChange={value =>
-              this.setState({
-                [EDUCATION_FORM]: value ? value : undefined,
-                [GROUP]: undefined
-              })}
-            options={loading ? [] : allEducationForms.nodes}
             valueKey="key"
             labelKey="name"
           />
