@@ -3,20 +3,11 @@ import React, { Component } from 'react'
 import { withApollo } from 'react-apollo'
 import Select from 'react-select'
 
-const doSearch = ({
-  division,
-  educationForm,
-  educationLevel,
-  recruitmentYear
-}) =>
-  division === 0 ||
-  educationForm === 0 ||
-  educationLevel === 0 ||
-  recruitmentYear === 0
+const doSearch = ({ division, educationLevel, recruitmentYear }) =>
+  division === 0 || educationLevel === 0 || recruitmentYear === 0
 
 const notEqual = (prevVar, nextVar) =>
   prevVar.division !== nextVar.division ||
-  prevVar.educationForm !== nextVar.educationForm ||
   prevVar.educationLevel !== nextVar.educationLevel ||
   prevVar.recruitmentYear !== nextVar.recruitmentYear
 
@@ -65,6 +56,8 @@ class Sn extends Component {
     const { options } = this.state
     const { name, value, variables } = this.props
     const isSearch = doSearch(variables)
+    console.log(isSearch)
+
     if (isSearch)
       return (
         <Select.Async

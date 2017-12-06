@@ -40,20 +40,17 @@ const props = ({ ownProps, data: { loading, error, ...rest } }) => ({
 const SELECT_GROUPS = gql`
   query selectGroups(
     $first: Int
-    $search: String
     $division: Int
-    $educationForm: Int
     $educationLevel: Int
     $recruitmentYear: Int
   ) {
-    EDUCATION_FORM
-    allNodes: searchAcademicGroup(
-      search: $search
+    allNodes: allGroups(
+      condition: {
+        facultyId: $division
+        educationLevelId: $educationLevel
+        recruitmentYear: $recruitmentYear
+      }
       first: $first
-      divisionId: $division
-      educationFormId: $educationForm
-      educationLevelId: $educationLevel
-      recruitmentYear: $recruitmentYear
     ) {
       nodes {
         key: id
@@ -80,7 +77,6 @@ const recruitmentYears = [17, 16, 15, 14, 13, 12].map(el => ({
 class SelectGroup extends Component {
   state = {
     [DIVISION]: undefined,
-    [EDUCATION_FORM]: undefined,
     [EDUCATION_LEVEL]: undefined,
     [RECRUITMENT_YEAR]: undefined,
     [GROUP]: undefined
@@ -98,9 +94,6 @@ class SelectGroup extends Component {
 
   getVariables = () => ({
     [DIVISION]: this.state[DIVISION] ? this.state[DIVISION].key : 0,
-    [EDUCATION_FORM]: this.state[EDUCATION_FORM]
-      ? this.state[EDUCATION_FORM].key
-      : 0,
     [EDUCATION_LEVEL]: this.state[EDUCATION_LEVEL]
       ? this.state[EDUCATION_LEVEL].key
       : 0,
