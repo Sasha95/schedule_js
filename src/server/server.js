@@ -10,7 +10,12 @@ const pgConfig = {
   post: '5432',
   database: 'mangir'
 }
-const config = { graphiql: true, pgDefaultRole: 'mangir' }
+const config = {
+  graphiql: true,
+  pgDefaultRole: 'mangir',
+  jwtPgTypeIdentifier: 'schedule1.jwt',
+  jwtSecret: 'sdfgwaefasbhwa'
+}
 
 app.use(postgraphql(pgConfig, ['schedule1'], config))
 
